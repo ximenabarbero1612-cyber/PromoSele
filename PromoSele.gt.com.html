@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promoción Camisolas - Oferta Especial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(236, 72, 153, 0.3); }
+            50% { box-shadow: 0 0 30px rgba(236, 72, 153, 0.6); }
+        }
+
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .pulse-glow {
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+
+        .gradient-text {
+            background: linear-gradient(45deg, #ec4899, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="min-h-full bg-gradient-to-br from-pink-50 via-purple-50 to-indigo-100">
+    <main class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-5xl md:text-6xl font-bold gradient-text mb-4">
+                ✨ SUPER PROMOCIÓN ✨
+            </h1>
+            <p class="text-2xl text-gray-700 font-medium">Camisolas de Ensueño</p>
+        </header>
+
+        <!-- Oferta Principal -->
+        <section class="bg-white rounded-3xl shadow-2xl p-8 mb-12 pulse-glow">
+            <div class="text-center mb-8">
+                <div class="inline-block bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-3 rounded-full text-xl font-bold mb-4 float-animation">
+                    🔥 OFERTA LIMITADA 🔥
+                </div>
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">
+                    ¡3x2 en Todas las Camisolas!
+                </h2>
+                <p class="text-xl text-gray-600 mb-6">
+                    Llévate 3 camisolas y paga solo 2 • Válido hasta agotar existencias
+                </p>
+
+                <!-- Contador de tiempo -->
+                <div class="bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-2xl p-6 mb-6">
+                    <p class="text-lg font-semibold mb-2">⏰ ¡Oferta termina en:</p>
+                    <div id="countdown" class="text-3xl font-bold">
+                        <span id="days">03</span>d 
+                        <span id="hours">12</span>h 
+                        <span id="minutes">45</span>m 
+                        <span id="seconds">30</span>s
+                    </div>
+                </div>
+            </div>
+
+            <!-- Productos -->
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <!-- Camisola 1 -->
+                <div class="bg-gradient-to-br from-pink-100 to-purple-100 rounded-2xl p-6 text-center hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="w-32 h-32 mx-auto mb-4 bg-gradient-to-br from-pink-300 to-pink-400 rounded-full flex items-center justify-center">
+                        <span class="text-6xl">👗</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Camisola Clásica</h3>
+                    <p class="text-gray-600 mb-3">Algodón suave y cómodo</p>
+                    <div class="text-2xl font-bold text-pink-600">$29.99</div>
+                    <div class="text-sm text-gray-500 line-through">$39.99</div>
+                </div>
+
+                <!-- Camisola 2 -->
+                <div class="bg-gradient-to-br from-purple-100 to-indigo-100 rounded-2xl p-6 text-center hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="w-32 h-32 mx-auto mb-4 bg-gradient-to-br from-purple-300 to-purple-400 rounded-full flex items-center justify-center">
+                        <span class="text-6xl">✨</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Camisola Premium</h3>
+                    <p class="text-gray-600 mb-3">Seda natural con encaje</p>
+                    <div class="text-2xl font-bold text-purple-600">$49.99</div>
+                    <div class="text-sm text-gray-500 line-through">$69.99</div>
+                </div>
+
+                <!-- Camisola 3 -->
+                <div class="bg-gradient-to-br from-indigo-100 to-blue-100 rounded-2xl p-6 text-center hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="w-32 h-32 mx-auto mb-4 bg-gradient-to-br from-indigo-300 to-indigo-400 rounded-full flex items-center justify-center">
+                        <span class="text-6xl">🌙</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Camisola Nocturna</h3>
+                    <p class="text-gray-600 mb-3">Diseño elegante y fresco</p>
+                    <div class="text-2xl font-bold text-indigo-600">$39.99</div>
+                    <div class="text-sm text-gray-500 line-through">$54.99</div>
+                </div>
+            </div>
+
+            <!-- Botón de acción -->
+            <div class="text-center">
+                <button id="shopBtn" class="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-bold py-4 px-12 rounded-full text-xl transform hover:scale-105 transition-all duration-300 shadow-lg">
+                    🛍️ ¡Comprar Ahora!
+                </button>
+            </div>
+        </section>
+
+        <!-- Beneficios adicionales -->
+        <section class="grid md:grid-cols-3 gap-6 mb-12">
+            <div class="bg-white rounded-2xl p-6 text-center shadow-lg">
+                <div class="text-4xl mb-3">🚚</div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2">Envío Gratis</h3>
+                <p class="text-gray-600">En compras mayores a $50</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 text-center shadow-lg">
+                <div class="text-4xl mb-3">🔄</div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2">Cambios Gratis</h3>
+                <p class="text-gray-600">30 días para cambios</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 text-center shadow-lg">
+                <div class="text-4xl mb-3">⭐</div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2">Calidad Premium</h3>
+                <p class="text-gray-600">Materiales de primera</p>
+            </div>
+        </section>
+
+        <!-- Testimonios -->
+        <section class="bg-white rounded-3xl shadow-xl p-8">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">
+                💕 Lo que dicen nuestras clientas
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gradient-to-br from-pink-50 to-purple-50 rounded-2xl p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-pink-300 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-xl">👩</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">María González</h4>
+                            <div class="text-yellow-500">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"¡Increíble calidad! Las camisolas son súper cómodas y el diseño es hermoso. Definitivamente volveré a comprar."</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-300 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-xl">👩</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Ana Rodríguez</h4>
+                            <div class="text-yellow-500">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"La promoción 3x2 es fantástica. Pude renovar todo mi guardarropa de camisolas a un precio increíble."</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Contador regresivo
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const endTime = now + (3 * 24 * 60 * 60 * 1000) + (12 * 60 * 60 * 1000) + (45 * 60 * 1000) + (30 * 1000);
+
+            setInterval(() => {
+                const currentTime = new Date().getTime();
+                const timeLeft = endTime - currentTime;
+
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                document.getElementById('days').textContent = days.toString().padStart(2, '0');
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            }, 1000);
+        }
+
+        // Botón de compra
+        document.getElementById('shopBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+
+            // Efecto visual
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1.05)';
+            }, 100);
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+            }, 200);
+
+            // Mensaje de confirmación
+            const originalText = this.innerHTML;
+            this.innerHTML = '✅ ¡Agregado al carrito!';
+            this.style.background = 'linear-gradient(45deg, #10b981, #059669)';
+
+            setTimeout(() => {
+                this.innerHTML = originalText;
+                this.style.background = 'linear-gradient(45deg, #ec4899, #8b5cf6)';
+            }, 2000);
+        });
+
+        // Inicializar contador
+        updateCountdown();
+    </script>
+</body>
+</html>
